@@ -1,0 +1,9 @@
+/Users/ragnah/source/dotnet-core1-demo/dotnet-core1-demo/Hello1/bin/Release/netcoreapp1.0/Hello1.deps.json
+/Users/ragnah/source/dotnet-core1-demo/dotnet-core1-demo/Hello1/bin/Release/netcoreapp1.0/Hello1.dll
+/Users/ragnah/source/dotnet-core1-demo/dotnet-core1-demo/Hello1/bin/Release/netcoreapp1.0/Hello1.pdb
+/Users/ragnah/source/dotnet-core1-demo/dotnet-core1-demo/Hello1/obj/Release/netcoreapp1.0/Hello1.csprojAssemblyReference.cache
+/Users/ragnah/source/dotnet-core1-demo/dotnet-core1-demo/Hello1/obj/Release/netcoreapp1.0/Hello1.csproj.CoreCompileInputs.cache
+/Users/ragnah/source/dotnet-core1-demo/dotnet-core1-demo/Hello1/obj/Release/netcoreapp1.0/Hello1.AssemblyInfoInputs.cache
+/Users/ragnah/source/dotnet-core1-demo/dotnet-core1-demo/Hello1/obj/Release/netcoreapp1.0/Hello1.AssemblyInfo.cs
+/Users/ragnah/source/dotnet-core1-demo/dotnet-core1-demo/Hello1/obj/Release/netcoreapp1.0/Hello1.dll
+/Users/ragnah/source/dotnet-core1-demo/dotnet-core1-demo/Hello1/obj/Release/netcoreapp1.0/Hello1.pdb

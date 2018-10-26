@@ -1,0 +1,51 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Globals:
+  Function:
+    Runtime: dotnetcore2.0
+    Timeout: 180
+    MemorySize: 256
+    Environment:
+      Variables:
+        DEMOTABLE: demo2-dev
+      
+  Api:
+    EndpointConfiguration: REGIONAL
+
+Resources:
+  HelloWorld2:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: 'Hello2::Hello2.Function::FunctionHandler'
+      CodeUri: 's3://ragnah-dotnet-demo/Hello2.zip'
+      Description: Hello World
+      MemorySize: 256
+      Policies:
+        - DynamoDBCrudPolicy: 
+            TableName: !Ref DemoTable
+        - SNSPublishMessagePolicy: 
+            TopicName: !GetAtt DemoNotification.TopicName
+        - CloudWatchPutMetricPolicy: {}
+      Events:
+        PostBookingEvent:
+          Type: Api
+          Properties:
+            Path: /hello2
+            Method: GET
+        
+  
+
+  DemoTable:
+    Type: AWS::Serverless::SimpleTable
+    Properties:
+      TableName: demo2-dev
+      PrimaryKey:
+        Name: demoid
+        Type: String
+
+  
+  DemoNotification:
+    Type: AWS::SNS::Topic
+    Properties:
+      DisplayName: 'Demo2'
+      TopicName: Demo2Notify
